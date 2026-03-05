@@ -29,10 +29,15 @@ import { rehypeImageWidth } from "./src/plugins/rehype-image-width.mjs";
 import rehypeExternalLinks from "rehype-external-links";
 import { remarkFixGithubAdmonitions } from "./src/plugins/remark-fix-github-admonitions.js";
 
+const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
+const basePath =
+	process.env.PUBLIC_BASE_PATH ??
+	(process.env.GITHUB_ACTIONS === "true" && repoName ? `/${repoName}/` : "/");
+
 // https://astro.build/config
 export default defineConfig({
 	site: siteConfig.siteURL,
-	base: "/",
+	base: basePath,
 	trailingSlash: "always",
 
 	output: "static",
