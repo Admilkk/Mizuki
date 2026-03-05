@@ -44,8 +44,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build site (skip Pagefind in Pages deploy)
-        run: pnpm astro build && node scripts/compress-fonts.js
+      - name: Build site (sync content, skip Pagefind)
+        run: pnpm sync-content && pnpm astro build && node scripts/compress-fonts.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
