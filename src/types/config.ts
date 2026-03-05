@@ -77,6 +77,7 @@ export type SiteConfig = {
 
 	// 顶栏标题配置
 	navbarTitle?: {
+		hidden?: boolean; // 是否隐藏左上角站点标题区域
 		mode?: "text-icon" | "logo"; // 显示模式："text-icon" 显示图标+文本，"logo" 仅显示Logo
 		text: string; // 顶栏标题文本
 		icon?: string; // 顶栏标题图标路径

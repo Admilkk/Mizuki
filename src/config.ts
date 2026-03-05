@@ -50,6 +50,7 @@ export const siteConfig: SiteConfig = {
 
 	// 顶栏标题配置
 	navbarTitle: {
+		hidden: true, // 隐藏左上角站点标题
 		// 显示模式："text-icon" 显示图标+文本，"logo" 仅显示Logo
 		mode: "logo",
 		// 顶栏标题文本
@@ -163,7 +164,7 @@ export const siteConfig: SiteConfig = {
 			title: "Admilk的博客", // 主页横幅主标题
 
 			subtitle: [
-				"记录技术、生活与思考",
+				"分享技术、生活与思考",
 				"欢迎来到 Admilk 的博客",
 			],
 			typewriter: {
